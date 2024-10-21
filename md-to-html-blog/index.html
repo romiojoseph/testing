@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website - Portfolio of [Your Name]</title>
+    <meta name="description" content="Brief description of the page">
+    <meta property="og:image" content="assets/social-image.png">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" />
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/favicon.png" alt="Blog logo" class="logo-glyph">
+            <h5 class="blog-name">Blogspot</h5>
+        </div>
+
+        <button class="telegram-btn" onclick="window.open('https://t.me/daily_astronomy_pictures', '_blank');">
+            <i class="ph-duotone ph-telegram-logo"></i>
+            Subscribe on Telegram
+        </button>
+    </header>
+
+    <div class="container">
+        <main>
+            <section class="hero-section">
+                <section id="main-post">
+                </section>
+
+                <section id="featured-posts">
+                </section>
+            </section>
+
+            <section id="category-sections">
+            </section>
+        </main>
+
+    </div>
+
+    <footer class="common-footer">
+
+        <div class="footer-container">
+            <div class="disclaimer">You won't find any newsletters here, as they can often feel overwhelming. Instead,
+                get updates via RSS Feed to stay updated with new posts directly in your feed reader or join our
+                Telegram channel for instant notifications. The opinions expressed are my own and do not reflect those
+                of any organizations I may be associated with.
+
+                <div class="cta-group">
+                    <button class="telegram-btn"
+                        onclick="window.open('https://t.me/daily_astronomy_pictures', '_blank');">
+                        <i class="ph-duotone ph-telegram-logo"></i>
+                        Subscribe on Telegram
+                    </button>
+
+                    <button class="rss-btn" onclick="window.open('https://t.me/daily_astronomy_pictures', '_blank');">
+                        <i class="ph-duotone ph-rss"></i>
+                        Follow the RSS feed
+                    </button>
+                </div>
+
+            </div>
+            <div class="middle">
+                <div class="normal-top">
+                    <h6 class="normal-post-heading">About this blog</h6>
+                    <p class="normal-post-subtitle">Here you can write about the purpose of your blog, what topics you
+                        cover, or a brief bio about yourself and your journey.</p>
+                </div>
+
+                <div class="follow-icons">
+                    <a href="https://bsky.app/profile/romio.substack.com/feed/aaaomgpqdm7kg" target="_blank"
+                        title="Bluesky" class="social-icon" rel="noopener noreferrer">
+                        <img src="assets/bluesky.svg" alt="Bluesky">
+                    </a>
+
+                    <a href="https://twitter.com" target="_blank" title="Twitter" class="social-icon"
+                        rel="noopener noreferrer">
+                        <img src="assets/twitter.svg" alt="Twitter">
+                    </a>
+
+                    <a href="https://romiojoseph.github.io/open-source/" target="_blank" title="GitHub"
+                        class="social-icon" rel="noopener noreferrer">
+                        <img src="assets/github.svg" alt="GitHub">
+                    </a>
+
+                    <a href="https://www.youtube.com/@romiojoseph" target="_blank" title="YouTube" class="social-icon"
+                        rel="noopener noreferrer">
+                        <img src="assets/youtube.svg" alt="YouTube">
+                    </a>
+
+                    <a href="https://in.pinterest.com/romiojoseph/" target="_blank" title="Pinterest"
+                        class="social-icon" rel="noopener noreferrer">
+                        <img src="assets/pinterest.svg" alt="Pinterest">
+                    </a>
+
+                    <a href="https://romio.substack.com/p/open-design-tools-data-ownership-portability" target="_blank"
+                        title="RSS Feed" class="social-icon" rel="noopener noreferrer">
+                        <img src="assets/rss-feed.svg" alt="RSS Feed">
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="end">
+                <p class="footnote">© 2024 My Blog</p>
+                <p class="footnote">Terms, and polices</p>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

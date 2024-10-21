@@ -1,0 +1,20 @@
+{
+    "Design": {
+        "description": "The creation and development of plans or concepts for the appearance, function, or structure of something. This can include graphic design, web design, interior design, and more."
+    },
+    "Blog": {
+        "description": "A personal or professional online journal where an individual or group shares thoughts, experiences, and information on a particular topic or subject."
+    },
+    "Movies": {
+        "description": "Immerse yourself in captivating stories, unforgettable characters, and stunning visuals with our handpicked selection of films."
+    },
+    "Philosophy": {
+        "description": "Explore the fundamental questions of existence, knowledge, and ethics through in-depth articles and essays."
+    },
+    "Technology": {
+        "description": "Discover the latest advancements and trends in technology, from artificial intelligence to renewable energy."
+    },
+    "News": {
+        "description": "Stay informed with our comprehensive news coverage, featuring breaking news, in-depth analysis, investigative journalism, and expert commentary on global and local events."
+    }
+  }
