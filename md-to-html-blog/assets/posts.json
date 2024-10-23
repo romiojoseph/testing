@@ -24,5 +24,18 @@
         "updated_time": "09:59 AM",
         "category": "blog",
         "post_type": "normal"
+    },
+        {
+        "file": "docs/testing-file.md",
+        "title": "Blogspot template documentation doc",
+        "description": "This documentation explains how to set up and use the Blogspot template to create your own personal blog.",
+        "social_image": "posts/images/image.png",
+        "author": "Romio",
+        "pub_date": "2024-10-22",
+        "pub_time": "09:00 AM",
+        "updated_date": "2025-01-25",
+        "updated_time": "09:59 AM",
+        "category": "blog",
+        "post_type": "normal"
     }
 ]
