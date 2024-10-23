@@ -28,7 +28,7 @@ function formatTime(timeString) {
 }
 
 async function loadPosts() {
-    const response = await fetch('https://github.com/romiojoseph/testing/blob/main/md-to-html-blog/assets/posts.json');
+    const response = await fetch('https://raw.githubusercontent.com/romiojoseph/testing/refs/heads/main/md-to-html-blog/assets/posts.json');
     const posts = await response.json();
 
     // 1. Find the Pinned Post (if any)
