@@ -1,7 +1,6 @@
 // Configuration Variables (Update these with your GitHub username, repository name, and optionally folder name)
 const githubUsername = "romiojoseph";
 const githubRepositoryName = "testing";
-const folderName = "YOUR-FOLDER-NAME"; // Only change this if you're creating a folder inside a repo; otherwise, leave it as is.
 
 // Get all navigation links
 const navLinks = document.querySelectorAll('#category-navigation a');
