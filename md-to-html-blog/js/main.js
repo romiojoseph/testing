@@ -28,7 +28,7 @@ function formatTime(timeString) {
 }
 
 async function loadPosts() {
-    const response = await fetch('https://raw.githubusercontent.com/romiojoseph/testing/refs/heads/main/md-to-html-blog/assets/posts.json');
+    const response = await fetch('assets/posts.json');
     const posts = await response.json();
 
     // 1. Find the Pinned Post (if any)
@@ -170,7 +170,7 @@ if (window.location.pathname.endsWith('index.html')) {
     const urlParams = new URLSearchParams(window.location.search);
     const postFile = urlParams.get('post');
     if (postFile) {
-        loadMarkdown(`posts/${postFile}`);
+        loadMarkdown(postFile);
         setupCopyButton(); // Set up the copy button when on post page
     } else {
         document.getElementById('post-content').innerHTML = '<p>Post not found.</p>';
@@ -178,7 +178,7 @@ if (window.location.pathname.endsWith('index.html')) {
 }
 
 function loadMarkdown(file) {
-    fetch(file)
+    fetch(`posts/${file}`) 
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -246,7 +246,7 @@ function loadMarkdown(file) {
 
             // Convert Markdown content to HTML 
             const updatedContent = content.replace(/!\[(.*?)\]\((.*?)\)/g, (match, alt, src) => {
-                return `![${alt}](posts/${src})`;
+                return `![${alt}](posts/${src})`; 
             });
 
             // Enable Showdown options for tables and other features
@@ -280,7 +280,7 @@ function loadMarkdown(file) {
 }
 
 // Event listener for "Terms, and polices" link (assuming it's in the footer)
-const termsLink = document.getElementById('terms-and-policies');
+const termsLink = document.getElementById('terms-policies-disclaimer');
 
 if (termsLink) {
     termsLink.addEventListener('click', (event) => {
