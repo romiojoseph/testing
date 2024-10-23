@@ -18,7 +18,7 @@ navLinks.forEach((link) => {
 function formatDate(dateString) {
     const date = new Date(dateString);
     const options = { month: 'short', day: 'numeric', year: 'numeric' };
-    return date.toLocaleDateString('en-US', options); // Format date as "Oct 19, 2024"
+    return date.toLocaleDateString('en-US', options);
 }
 
 // Helper function to format the time
@@ -31,7 +31,6 @@ async function loadPosts() {
     const response = await fetch('assets/posts.json');
     const posts = await response.json();
 
-    // 1. Find the Pinned Post (if any)
     const pinnedPost = posts.find(post => post.post_type === "pinned");
     const pinnedPostElement = document.getElementById('pinned-post');
 
@@ -56,10 +55,9 @@ async function loadPosts() {
             </div>
         `;
     } else {
-        pinnedPostElement.innerHTML = ''; // Clear the pinned post section if no pinned post is found
+        pinnedPostElement.innerHTML = '';
     }
 
-    // 2. All Other Posts (including "normal" posts, sorted by date) 
     const otherPosts = posts.filter(post => post.post_type !== "pinned");
     otherPosts.sort((a, b) => new Date(b.pub_date) - new Date(a.pub_date));
 
@@ -79,30 +77,25 @@ async function loadPosts() {
         allPostsElement.appendChild(postElement);
     });
 
-    // 3. Category Navigation 
     const categoryLinks = document.querySelectorAll('#category-navigation a');
     categoryLinks.forEach(link => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
             const selectedCategory = link.dataset.category.toLowerCase();
 
-            // Filter posts based on category (case-insensitive), including "normal" posts as "blogging"
             const filteredPosts = posts.filter(post =>
                 (post.category && post.category.toLowerCase() === selectedCategory) ||
                 (post.post_type === "normal" && selectedCategory === "blogging")
             );
 
-            // Update the displayed posts with the filtered posts
-            allPostsElement.innerHTML = ''; // Clear current posts
+            allPostsElement.innerHTML = '';
 
             if (filteredPosts.length === 0) {
-                // Display "No posts found" message
                 const noPostsMessage = document.createElement('p');
                 noPostsMessage.textContent = "Hmm... nothing to read in this category right now.";
                 noPostsMessage.className = 'normal-post-subtitle';
                 allPostsElement.appendChild(noPostsMessage);
             } else {
-                // Display filtered posts
                 filteredPosts.forEach(post => {
                     const postElement = document.createElement('div');
                     postElement.innerHTML = `
@@ -131,17 +124,15 @@ function setupCopyButton() {
 
         copyButton.addEventListener('click', () => {
             if (navigator.clipboard && navigator.clipboard.writeText) {
-                // Use Clipboard API (modern browsers)
                 navigator.clipboard.writeText(currentLink)
                     .then(() => {
                         alert('Link copied to clipboard!');
                     })
                     .catch(err => {
                         console.error('Error copying text (Clipboard API):', err);
-                        fallbackCopyToClipboard(currentLink); // Call fallback if Clipboard API fails
+                        fallbackCopyToClipboard(currentLink);
                     });
             } else {
-                // Fallback to document.execCommand('copy') (older browsers)
                 fallbackCopyToClipboard(currentLink);
             }
         });
@@ -163,7 +154,6 @@ function fallbackCopyToClipboard(text) {
     document.body.removeChild(textArea);
 }
 
-// Event listener to trigger loading functions based on the page 
 const urlParams = new URLSearchParams(window.location.search);
 const postFile = urlParams.get('post');
 
@@ -175,10 +165,9 @@ if (postFile) {
 }
 
 function loadMarkdown(file) {
-    // Construct the correct URL for fetching the Markdown file
-    const markdownFilePath = `/testing/md-to-html-blog/posts/${file}`;
+    const rawGitHubURL = `https://raw.githubusercontent.com/romiojoseph/testing/main/md-to-html-blog/posts/${file}`;
 
-    fetch(markdownFilePath)
+    fetch(rawGitHubURL)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -186,7 +175,6 @@ function loadMarkdown(file) {
             return response.text();
         })
         .then(mdText => {
-            // More robust metadata extraction
             const metadataStartIndex = mdText.indexOf('---');
             const metadataEndIndex = mdText.indexOf('---', metadataStartIndex + 3);
 
@@ -206,20 +194,17 @@ function loadMarkdown(file) {
                 content = mdText.substring(metadataEndIndex + 3);
             }
 
-            // Set title and metadata
             document.title = metadata.title || "Blog Post";
             document.getElementById('post-category').textContent = metadata.category || "Uncategorized";
             document.getElementById('post-title').textContent = metadata.title || "Untitled Post";
             document.getElementById('post-description').textContent = metadata.description || "";
 
-            // Format the date and time 
             let dateString = "Published on " + formatDate(metadata.pub_date);
             if (metadata.pub_time && metadata.pub_time !== "09:00 AM") {
                 dateString += " at " + formatTime(metadata.pub_time);
             }
             dateString += " by " + (metadata.author || "Unknown Author");
 
-            // Handle updated date and time 
             if (metadata.updated_date && metadata.updated_date.trim() !== "") {
                 const pubDate = new Date(metadata.pub_date);
                 const updatedDate = new Date(metadata.updated_date);
@@ -237,19 +222,16 @@ function loadMarkdown(file) {
 
             document.getElementById('post-author-date').textContent = dateString;
 
-            // Set meta tags for SEO and social sharing
             document.getElementById('og-title').content = metadata.title || "Blog Post";
             document.getElementById('og-description').content = metadata.description || "";
             document.getElementById('og-image').content = metadata.social_image || "";
             document.getElementById('meta-author').content = metadata.author || "Unknown Author";
             document.getElementById('meta-description').content = metadata.description || "";
 
-            // Convert Markdown content to HTML 
             const updatedContent = content.replace(/!\[(.*?)\]\((.*?)\)/g, (match, alt, src) => {
-                return `![${alt}](posts/${src})`; 
+                return `![${alt}](posts/${src})`;
             });
 
-            // Enable Showdown options for tables and other features
             const converter = new showdown.Converter({
                 tables: true,
                 simplifiedAutoLink: true,
@@ -259,19 +241,16 @@ function loadMarkdown(file) {
 
             let html = converter.makeHtml(updatedContent);
 
-            // Add target="_blank" to all links in the generated HTML
             html = html.replace(/<a href="/g, '<a target="_blank" href="');
 
             document.getElementById('post-content').innerHTML = html;
 
-            // Highlight code blocks using highlight.js
             hljs.highlightAll();
         })
         .catch(error => {
             console.error('Error loading Markdown file:', error);
             document.getElementById('post-content').innerHTML = '<p>Failed to load post content.</p>';
 
-            // Hide the "detail-post-heading" section
             const detailPostHeading = document.querySelector('.detail-post-heading');
             if (detailPostHeading) {
                 detailPostHeading.style.display = "none";
@@ -279,13 +258,11 @@ function loadMarkdown(file) {
         });
 }
 
-// Event listener for "Terms, and polices" link (assuming it's in the footer)
 const termsLink = document.getElementById('terms-policies-disclaimer');
 
 if (termsLink) {
     termsLink.addEventListener('click', (event) => {
         event.preventDefault();
-        // Assuming the MD file is in a subfolder named 'legal'
         window.location.href = `post.html?post=legal/terms-and-policies.md`;
     });
 }
