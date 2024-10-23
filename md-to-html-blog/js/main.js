@@ -28,7 +28,7 @@ function formatTime(timeString) {
 }
 
 async function loadPosts() {
-    const response = await fetch('assets/posts.json');
+    const response = await fetch('assets/posts.json'); 
     const posts = await response.json();
 
     // 1. Find the Pinned Post (if any)
@@ -122,6 +122,7 @@ async function loadPosts() {
     });
 }
 
+
 // Copy button functionality with error handling and fallback
 function setupCopyButton() {
     const copyButton = document.getElementById('copy-link');
@@ -163,22 +164,19 @@ function fallbackCopyToClipboard(text) {
     document.body.removeChild(textArea);
 }
 
-// Event listener to trigger loading functions based on the page
-if (window.location.pathname.endsWith('index.html')) {
+// Event listener to trigger loading functions based on the page 
+const urlParams = new URLSearchParams(window.location.search);
+const postFile = urlParams.get('post');
+
+if (postFile) {
+    loadMarkdown(postFile);
+    setupCopyButton();
+} else {
     loadPosts();
-} else if (window.location.pathname.endsWith('post.html')) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const postFile = urlParams.get('post');
-    if (postFile) {
-        loadMarkdown(postFile);
-        setupCopyButton(); // Set up the copy button when on post page
-    } else {
-        document.getElementById('post-content').innerHTML = '<p>Post not found.</p>';
-    }
 }
 
 function loadMarkdown(file) {
-    fetch(`posts/${file}`) 
+    fetch(`posts/${file}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -246,7 +244,7 @@ function loadMarkdown(file) {
 
             // Convert Markdown content to HTML 
             const updatedContent = content.replace(/!\[(.*?)\]\((.*?)\)/g, (match, alt, src) => {
-                return `![${alt}](posts/${src})`; 
+                return `![${alt}](posts/${src})`;
             });
 
             // Enable Showdown options for tables and other features
