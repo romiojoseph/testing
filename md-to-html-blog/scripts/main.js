@@ -6,7 +6,7 @@ function formatDate(dateString) {
 }
 
 async function loadPosts() {
-    const response = await fetch('posts/posts.json');
+    const response = await fetch('./posts/posts.json');
     const posts = await response.json();
 
     // Sort posts by publication date (descending)
@@ -107,11 +107,11 @@ async function loadPosts() {
 }
 
 async function loadPostsByCategory(category) {
-    const response = await fetch('posts/posts.json');
+    const response = await fetch('./posts/posts.json');
     const posts = await response.json();
 
     // Fetch category.json
-    const categoryResponse = await fetch('assets/category.json');
+    const categoryResponse = await fetch('./assets/category.json');
     const categories = await categoryResponse.json();
 
     // Get category description
