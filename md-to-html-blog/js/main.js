@@ -175,7 +175,10 @@ if (postFile) {
 }
 
 function loadMarkdown(file) {
-    fetch(`posts/${file}`) 
+    // Construct the correct URL for fetching the Markdown file
+    const markdownFilePath = `/testing/md-to-html-blog/posts/${file}`;
+
+    fetch(markdownFilePath)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
