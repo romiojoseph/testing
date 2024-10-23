@@ -37,7 +37,7 @@
         "author": "John Doe",
         "pub_date": "2024-10-18",
         "category": "Movies",
-        "post_type": "normal"
+        "post_type": "featured"
     },
     {
         "file": "news/the-open-internet.md",
