@@ -165,7 +165,7 @@ if (postFile) {
 }
 
 function loadMarkdown(file) {
-    const rawGitHubURL = `https://raw.githubusercontent.com/romiojoseph/testing/main/md-to-html-blog/posts/${file}`;
+    const rawGitHubURL = `https://raw.githubusercontent.com/romiojoseph/testing/main/posts/${file}`;
 
     fetch(rawGitHubURL)
         .then(response => {
