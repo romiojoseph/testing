@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Detail</title>
 
-    <meta property="og:title" content="" id="og-title">
-    <meta property="og:description" content="" id="og-description">
-    <meta property="og:image" content="" id="og-image">
+    <meta property="og:title" content="Loading..." id="og-title">
+    <meta property="og:description" content="Loading..." id="og-description">
+    <meta property="og:image" content="assets/default-social-image.png" id="og-image">
     <meta property="og:type" content="article">
     <meta name="author" content="" id="meta-author">
-    <meta name="description" content="" id="meta-description">
+    <meta name="description" content="Loading..." id="meta-description">
 
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
@@ -30,6 +27,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/googlecode.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <meta name="robots" content="index, follow">
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const postFile = urlParams.get('post');
+
+        if (postFile) {
+            fetch('assets/posts.json')
+                .then(response => response.json())
+                .then(posts => {
+                    const postMetadata = posts.find(post => post.file === postFile);
+
+                    if (postMetadata) {
+                        document.querySelector('meta[property="og:title"]').content = postMetadata.title || "Blog Post";
+                        document.querySelector('meta[property="og:description"]').content = postMetadata.description || "";
+                        document.querySelector('meta[property="og:image"]').content = postMetadata.social_image || "assets/default-social-image.png";
+                        document.querySelector('meta[name="description"]').content = postMetadata.description || "";
+                        document.title = postMetadata.title || "Blog Post";
+
+                        // Update other meta tags if needed
+                        document.getElementById('og-title').content = postMetadata.title;
+                        document.getElementById('og-description').content = postMetadata.description;
+                        document.getElementById('og-image').content = postMetadata.social_image;
+                        document.getElementById('meta-author').content = postMetadata.author;
+                        document.getElementById('meta-description').content = postMetadata.description;
+                    }
+                });
+        }
+    </script>
 </head>
 
 <body>
