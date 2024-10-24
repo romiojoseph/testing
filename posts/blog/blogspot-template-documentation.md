@@ -57,6 +57,8 @@ https://github.com/romiojoseph/markdown-html-blog
 ```
 Please note that all blog images are now being pulled from an `images` folder inside the `posts` directory, and the main blog items are from the `assets` folder in the root directory.
 
+![alt text](/images/image.png "optional title")
+
 2. **Update `posts.json`:**
    * Add an entry for each of your blog posts to the `posts.json` file. 
    * The `file` property should match the filename of your Markdown file (e.g., `my-first-post.md`).
