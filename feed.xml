@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Blogspot</title>
+    <link>https://romiojoseph.github.io/testing</link>
+    <description>A simple markdown to html blog</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Feb 2025 09:00:00 +0000</lastBuildDate>
+    
+    <item>
+      <title>Simple Test Blog Entry</title>
+      <link>https://romiojoseph.github.io/testing/post.html?post=docs/simple-test-blog-entry.md</link>
+      <description>A simple blog post used for testing how the blog appears and functions. It's a small step toward getting everything ready for future updates.</description>
+      <pubDate>Sat, 22 Feb 2025 09:00:00 +0000</pubDate>
+    </item>
+        
+    <item>
+      <title>Test Post for Blog Setup</title>
+      <link>https://romiojoseph.github.io/testing/post.html?post=opinions/test-post-for-blog-setup.md</link>
+      <description>Running a test with this blog post to check how the design and structure behave. It’s part of making sure everything works smoothly. More content coming soon.</description>
+      <pubDate>Sat, 22 Feb 2025 09:00:00 +0000</pubDate>
+    </item>
+        
+    <item>
+      <title>Blogspot template doc</title>
+      <link>https://romiojoseph.github.io/testing/post.html?post=blog/blogspot-template-documentation.md</link>
+      <description>This documentation explains how to set up and use the Blogspot template to create your own personal blog.</description>
+      <pubDate>Tue, 22 Oct 2024 09:00:00 +0000</pubDate>
+    </item>
+        
+    <item>
+      <title>Blogspot template documentation doc</title>
+      <link>https://romiojoseph.github.io/testing/post.html?post=blog/just-for-testing.md</link>
+      <description>This documentation explains how to set up and use the Blogspot template to create your own personal blog.</description>
+      <pubDate>Tue, 22 Oct 2024 09:00:00 +0000</pubDate>
+    </item>
+        
+    <item>
+      <title>Blogspot template documentation doc</title>
+      <link>https://romiojoseph.github.io/testing/post.html?post=docs/testing-file.md</link>
+      <description>This documentation explains how to set up and use the Blogspot template to create your own personal blog.</description>
+      <pubDate>Tue, 22 Oct 2024 09:00:00 +0000</pubDate>
+    </item>
+        
+    <item>
+      <title>Testing a Simple Blog Post</title>
+      <link>https://romiojoseph.github.io/testing/post.html?post=opinions/testing-a-simple-blog-post.md</link>
+      <description>This is just a simple post used to test how things look and work. Feel free to browse and see what fits.</description>
+      <pubDate>Tue, 22 Oct 2024 09:00:00 +0000</pubDate>
+    </item>
+        
+    <item>
+      <title>Trying Out a New Blog Post</title>
+      <link>https://romiojoseph.github.io/testing/post.html?post=opinions/trying-out-a-new-blog-post.md</link>
+      <description>This post is a quick test to see how everything looks and works. It's not much, just checking things out. Stick around for more updates.</description>
+      <pubDate>Tue, 22 Oct 2024 09:00:00 +0000</pubDate>
+    </item>
+        
+  </channel>
+</rss>
+    
