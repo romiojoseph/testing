@@ -45,7 +45,7 @@ async function loadPosts() {
     if (pinnedPost) {
         pinnedPostElement.innerHTML = ` 
             <div class="main-post"> 
-                <p class="post-image"><img src="${pinnedPost.social_image || 'assets/default-image.avif'}" alt="${pinnedPost.title} image" class="main-image"></p>
+                <p class="post-image"><img src="${pinnedPost.social_image || 'assets/default-image.png'}" alt="${pinnedPost.title} image" class="main-image"></p>
                 <div class="main-top">
                     <div class="post-info">
                         <p class="category"><a href="#">${pinnedPost.category || 'Blogging'}</a></p> 
@@ -74,7 +74,7 @@ async function loadPosts() {
         const postElement = document.createElement('div');
         postElement.innerHTML = `
             <div class="normal-post">
-                <p class="post-image"><img src="${post.social_image || 'assets/default-image.avif'}" alt="${post.title} image" class="normal-image"></p>
+                <p class="post-image"><img src="${post.social_image || 'assets/default-image.png'}" alt="${post.title} image" class="normal-image"></p>
                 <p class="main-post-pub-date">${formatDate(post.pub_date)}</p> 
                 <div class="normal-top">
                     <h5 class="normal-post-heading"><a href="post.html?post=${post.file}">${post.title}</a></h5>
@@ -108,7 +108,7 @@ async function loadPosts() {
                     const postElement = document.createElement('div');
                     postElement.innerHTML = `
                         <div class="normal-post">
-                            <p class="post-image"><img src="${post.social_image || 'assets/default-image.avif'}" alt="${post.title} image" class="normal-image"></p>
+                            <p class="post-image"><img src="${post.social_image || 'assets/default-image.png'}" alt="${post.title} image" class="normal-image"></p>
                             <p class="main-post-pub-date">${formatDate(post.pub_date)}</p> 
                             <div class="normal-top">
                                 <h5 class="normal-post-heading"><a href="post.html?post=${post.file}">${post.title}</a></h5>
