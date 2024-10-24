@@ -6,7 +6,7 @@ author: Romio
 pub_date: 2024-10-22
 pub_time: 09:00 AM
 updated_date: 2025-01-31
-updated_time: 08:71 AM
+updated_time: 08:81 AM
 category: blog
 ---
 
@@ -62,6 +62,8 @@ Please note that all blog images are now being pulled from an `images` folder in
 ![alt text](/posts/images/image.png "optional title")
 
 ![alt text](./posts/images/image.png "optional title")
+
+![alt text](posts/images/image.png "optional title")
 
 
 
