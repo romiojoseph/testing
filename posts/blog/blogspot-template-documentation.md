@@ -59,6 +59,8 @@ Please note that all blog images are now being pulled from an `images` folder in
 
 ![alt text](/images/image.png "optional title")
 
+alt text](/images/image.png "optional title"
+
 2. **Update `posts.json`:**
    * Add an entry for each of your blog posts to the `posts.json` file. 
    * The `file` property should match the filename of your Markdown file (e.g., `my-first-post.md`).
