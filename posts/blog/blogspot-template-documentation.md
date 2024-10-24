@@ -61,6 +61,8 @@ Please note that all blog images are now being pulled from an `images` folder in
 
 ![alt text](/posts/images/image.png "optional title")
 
+![alt text](./posts/images/image.png "optional title")
+
 
 
 2. **Update `posts.json`:**
