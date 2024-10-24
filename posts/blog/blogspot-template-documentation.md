@@ -5,8 +5,8 @@ social_image: posts/images/image.png
 author: Romio
 pub_date: 2024-10-22
 pub_time: 09:00 AM
-updated_date: 2025-01-25
-updated_time: 09:59 AM
+updated_date: 2025-01-31
+updated_time: 08:71 AM
 category: blog
 ---
 
@@ -57,11 +57,11 @@ https://github.com/romiojoseph/markdown-html-blog
 ```
 Please note that all blog images are now being pulled from an `images` folder inside the `posts` directory, and the main blog items are from the `assets` folder in the root directory.
 
-![alt text](./posts/images/image.png "optional title")
+
 
 ![alt text](/posts/images/image.png "optional title")
 
-alt text](/images/image.png "optional title"
+
 
 2. **Update `posts.json`:**
    * Add an entry for each of your blog posts to the `posts.json` file. 
