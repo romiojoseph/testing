@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your blog name]s' blog posts</title>
+
+    <meta property="og:title" content="[Your blog name]s' blog posts" id="og-title">
+    <meta property="og:description"
+        content="Click to read the blog now..."
+        id="og-description">
+    <meta property="og:image" content="assets/default-social-image.png" id="og-image">
+    <meta property="og:type" content="blog">
+    <meta name="author" content="Unknown Author" id="meta-author">
+    <meta name="description"
+        content="Click to read the blog now. No more newsletters—join the Telegram channel or follow the RSS feed for updates."
+        id="meta-description">
+
+    <link rel="icon" type="image/svg+xml" href="..\assets\favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="..\styles\post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/googlecode.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <meta name="robots" content="index, follow">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h5 class="blog-name" id="logo" onclick="window.location.href='../index.html'">Blogspot</h5>
+
+            <button class="telegram-btn" onclick="window.open('https://t.me/daily_astronomy_pictures', '_blank');">
+                <i class="ph-duotone ph-telegram-logo"></i>
+                Join on Telegram
+            </button>
+        </header>
+
+        <section class="detail-post-heading">
+            <p id="post-category">Uncategorized</p>
+            <div class="title-description">
+                <h2 id="post-title">Untitled Post</h2>
+                <p id="post-description"></p>
+            </div>
+            <p id="post-author-date">Published by Unknown Author on NaN Invalid Date NaN • 12:NaN AM</p>
+
+            <button id="copy-link" aria-label="Copy link"><i class="ph-duotone ph-link"></i>Copy link</button>
+        </section>
+
+        <article id="post-content"><p>ay, I've reviewed <code>main.js</code> and compared it to the initial project files. Here are the key differences and potential implications:</p>
+<p><strong>1. Client-Side Rendering (CSR) vs. Server-Side Rendering (SSR):</strong></p>
+<ul>
+<li><strong>Initial Project (SSR):</strong> The <code>build.js</code> file pre-renders all your Markdown posts into HTML files before deployment. This is faster for users as the HTML is readily available.</li>
+<li><strong><code>main.js</code> (CSR):</strong> The HTML for each post is generated dynamically in the user's browser using JavaScript when they visit a post page. This can be slower initially but offers flexibility for dynamic content updates.</li>
+</ul>
+<p><strong>2. Limitations of CSR:</strong></p>
+<ul>
+<li><strong>SEO:</strong> Search engines might have difficulty indexing CSR content as it relies on JavaScript execution. You might need to implement SEO solutions specific to CSR.</li>
+<li><strong>Initial Load Time:</strong> The initial page load can be slower as the browser needs to download and execute the JavaScript before rendering the content.</li>
+<li><strong>JavaScript Dependency:</strong> Users with JavaScript disabled won't be able to view the content.</li>
+</ul>
+<p><strong>3. Missing Features in the Initial Project (Based on <code>main.js</code>):</strong></p>
+<ul>
+<li><strong>Category Filtering:</strong> <code>main.js</code> has functionality to filter posts by category, which isn't present in the <code>build.js</code> approach. You might want to consider adding this to your initial project for better navigation.</li>
+<li><strong>Pinned Post:</strong> <code>main.js</code> supports displaying a "pinned" post prominently.  Your original project doesn't seem to have this feature.</li>
+<li><strong>Raw GitHub URL Loading:</strong> <code>main.js</code> fetches Markdown directly from your GitHub repository for rendering, which is useful for development and testing without pre-building the site.</li>
+</ul>
+<p><strong>Recommendation:</strong></p>
+<p>If you prefer the CSR approach with its dynamic features (category filtering, pinned posts), you might consider refactoring your initial project to work like <code>main.js</code>. However, be aware of the CSR limitations mentioned above, especially regarding SEO.</p>
+<p>If you prioritize SEO and fast initial load times, the SSR approach with <code>build.js</code> is generally better. You can enhance it by adding features like category filtering and a pinned post mechanism.</p>
+<p><strong>Next Steps:</strong></p>
+<p>To help you further, I need more specific information. For example:</p>
+<ul>
+<li><strong>What are your priorities for the blog (SEO, speed, dynamic features)?</strong></li>
+<li><strong>Are you comfortable with the limitations of CSR?</strong></li>
+<li><strong>What specific features from <code>main.js</code> do you want to add to your original project?</strong></li>
+</ul>
+<p>Once I have this information, I can provide more tailored advice and assistance.</p></article>
+
+        <footer>
+            <div class="text-group">
+                <h6 class="comment-question">Got questions or insights?</h6>
+
+                <div class="disclaimer">
+                    <p class="disclaimer">I don't have newsletters here because they can be overwhelming. Instead, you
+                        can stay updated with new posts by subscribing to the RSS feed or joining the Telegram channel
+                        for instant
+                        notifications.</p>
+                    <p class="disclaimer">All opinions shared are mine and don't reflect any organizations I'm
+                        associated with. Feel free to share your thoughts, questions, or feedback in the Telegram
+                        channel.</p>
+                </div>
+
+            </div>
+
+            <div class=" cta-group">
+                <button class="telegram-btn" onclick="window.open('https://t.me/daily_astronomy_pictures', '_blank');">
+                    <i class="ph-duotone ph-telegram-logo"></i>
+                    Join on Telegram
+                </button>
+                <button class="rss-btn" onclick="window.open('./feed.xml', '_blank');">
+                    <i class="ph-duotone ph-rss"></i>
+                    Follow the RSS feed
+                </button>
+            </div>
+
+            <div class="follow-icons">
+                <button class="social-icon"
+                    onclick="window.open('https://bsky.app/profile/romio.substack.com/feed/aaaomgpqdm7kg', '_blank')"
+                    title="Bluesky">
+                    <img src="../assets/bluesky.svg" alt="Bluesky" width="32" height="32">
+                </button>
+
+                <button class="social-icon" onclick="window.open('https://twitter.com', '_blank')" title="Twitter">
+                    <img src="../assets/twitter.svg" alt="Twitter" width="32" height="32">
+                </button>
+
+                <button class="social-icon"
+                    onclick="window.open('https://romiojoseph.github.io/open-source/', '_blank')" title="GitHub">
+                    <img src="../assets/github.svg" alt="GitHub" width="32" height="32">
+                </button>
+
+                <button class="social-icon" onclick="window.open('https://www.youtube.com/@romiojoseph', '_blank')"
+                    title="YouTube">
+                    <img src="../assets/youtube.svg" alt="YouTube" width="32" height="32">
+                </button>
+
+                <button class="social-icon" onclick="window.open('https://in.pinterest.com/romiojoseph/', '_blank')"
+                    title="Pinterest">
+                    <img src="../assets/pinterest.svg" alt="Pinterest" width="32" height="32">
+                </button>
+            </div>
+
+            <div id="footnote">
+                <p class="footnote">© 2024 My Blog</p>
+                <a href="terms-and-policies.html" class="footnote">Terms, Policies and Disclaimer</a>
+            </div>
+        </footer>
+    </main>
+    <script src="..\js\copyLink.js"></script>
+</body>
+
+</html>

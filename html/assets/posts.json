@@ -1,0 +1,93 @@
+[
+    {
+        "file": "blog\\blogspot-template-documentation.html",
+        "title": "Blogspot template doc",
+        "description": "This documentation explains how to set up and use the Blogspot template to create your own personal blog.",
+        "social_image": "blog/media/images/image.png",
+        "author": "Romio",
+        "published": "2024-10-23T02:46:00",
+        "updated": "2024-10-27",
+        "category": "blog",
+        "post_type": "pinned"
+    },
+    {
+        "file": "blog\\just-for-testing.html",
+        "title": "Blogspot template documentation doc",
+        "description": "This documentation explains how to set up and use the Blogspot template to create your own personal blog.",
+        "social_image": "blog/media/images/image.png",
+        "author": "Romio",
+        "published": "2024-10-23T02:46:00",
+        "category": "news",
+        "post_type": "regular"
+    },
+    {
+        "file": "blog\\simple-test-blog-entry.html",
+        "title": "Simple Test Blog Entry",
+        "description": "A simple blog post used for testing how the blog appears and functions. It's a small step toward getting everything ready for future updates.",
+        "social_image": "blog/media/images/image.png",
+        "author": "Romio",
+        "published": "2024-10-23T02:46:00",
+        "updated": "2024-10-27",
+        "category": "technology",
+        "post_type": "regular"
+    },
+    {
+        "file": "blog\\testing-file.html",
+        "title": "Blogspot template documentation doc",
+        "description": "This documentation explains how to set up and use the Blogspot template to create your own personal blog.",
+        "social_image": "blog/media/images/image.png",
+        "author": "Romio",
+        "published": "2024-10-23T02:46:00",
+        "updated": "2024-10-27",
+        "category": "movies",
+        "post_type": "regular"
+    },
+    {
+        "file": "blog\\terms-and-policies.html",
+        "title": "Terms, Policies, and Disclaimer Template",
+        "description": "Provide a brief overview of your blog, its purpose, and the purpose of this Terms, Policies, and Disclaimer document.",
+        "social_image": "blog/media/images/image.png",
+        "author": "Romio",
+        "published": "2024-10-23T02:46:00",
+        "updated": "2024-10-27",
+        "category": "legal",
+        "post_type": "regular"
+    },
+    {
+        "file": "blog\\test-post-for-blog-setup.html",
+        "title": "Test Post for Blog Setup",
+        "description": "Running a test with this blog post to check how the design and structure behave. It’s part of making sure everything works smoothly. More content coming soon.",
+        "social_image": "blog/media/images/image.png",
+        "author": "Romio",
+        "published": "2024-10-23T02:46:00",
+        "updated": "2024-10-27",
+        "category": "opinions",
+        "post_type": "regular"
+    },
+    {
+        "file": "blog\\testing-a-simple-blog-post.html",
+        "title": "Testing a Simple Blog Post",
+        "description": "This is just a simple post used to test how things look and work. Feel free to browse and see what fits.",
+        "social_image": "blog/media/images/image.png",
+        "author": "Romio",
+        "published": "2024-10-23T02:46:00",
+        "updated": "2024-10-27",
+        "category": "opinions",
+        "post_type": "regular"
+    },
+    {
+        "file": "blog\\trying-out-a-new-blog-post.html",
+        "title": "Trying Out a New Blog Post",
+        "description": "This post is a quick test to see how everything looks and works. It's not much, just checking things out. Stick around for more updates.",
+        "social_image": "blog/media/images/image.png",
+        "author": "Romio",
+        "published": "2024-10-23T02:46:00",
+        "updated": "2024-10-27",
+        "category": "opinions",
+        "post_type": "regular"
+    },
+    {
+        "file": "blog\\untitled.html",
+        "post_type": "regular"
+    }
+]
