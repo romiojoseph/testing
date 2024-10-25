@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogspot template doc</title>
+
+    <meta property="og:title" content="Blogspot template doc" id="og-title">
+    <meta property="og:description"
+        content="This documentation explains how to set up and use the Blogspot template to create your own personal blog."
+        id="og-description">
+    <meta property="og:image" content="posts/images/batman.jpg" id="og-image">
+    <meta property="og:type" content="blog">
+    <meta name="author" content="Romio" id="meta-author">
+    <meta name="description"
+        content="Click to read the blog now. No more newsletters—join the Telegram channel or follow the RSS feed for updates."
+        id="meta-description">
+
+    <link rel="icon" type="image/svg+xml" href="..\assets\favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="..\styles\post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/googlecode.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <meta name="robots" content="index, follow">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h5 class="blog-name" id="logo">Blogspot</h5>
+
+            <button class="telegram-btn" onclick="window.open('https://t.me/daily_astronomy_pictures', '_blank');">
+                <i class="ph-duotone ph-telegram-logo"></i>
+                Join on Telegram
+            </button>
+        </header>
+
+        <section class="detail-post-heading">
+            <p id="post-category">blog</p>
+            <div class="title-description">
+                <h2 id="post-title">Blogspot template doc</h2>
+                <p id="post-description">This documentation explains how to set up and use the Blogspot template to
+                    create your own personal blog.</p>
+            </div>
+            <p id="post-author-date">Published by Romio on 23 Oct 2024 • 2:46 AM (Updated on 27 Oct 2024 • 5:30 AM)</p>
+
+            <button id="copy-link" aria-label="Copy link"><i class="ph-duotone ph-link"></i>Copy link</button>
+        </section>
+
+        <article id="post-content">
+            <p><em>Welcome to the markdown to html blog documentation.</em></p>
+            <blockquote>
+                <p>I created all the JavaScript for this project with the help of LLMs. It works, but there might be
+                    issues. I'm sharing this as a personal blog template. Coders can cross-check and fix any problems.
+                    Non-coders can copy the JavaScript code into any LLMs to verify it themselves.</p>
+            </blockquote>
+            <h1 id="creditwhereitsdue">Credit where it’s due</h1>
+            <p>This template works with the help of <a href="https://github.com/showdownjs/showdown">Showdown</a> and is
+                used client-side, meaning it runs directly in the browser without needing a server.</p>
+            <p>Before we begin, let me clarify a few things straightforwardly. This is specifically created to run on
+                GitHub Pages. If you need a different approach use any LLMs and make the appropriate changes. It is
+                simple, if I can create this without any coding knowledge, you can too.</p>
+            <p><strong>Knowledge and resources needed:</strong> <a href="https://code.visualstudio.com/">VS Code</a>, <a
+                    href="https://github.com/">GitHub</a> and <a href="https://desktop.github.com/download/">GitHub
+                    Desktop</a>, <a href="https://www.python.org/">Python</a> needs to be installed, and of course <a
+                    href="https://obsidian.md/">Obsidian</a>.</p>
+            <h4 id="soyouneedabloggingsetupright">So, you need a blogging setup, right?</h4>
+            <p>You should decide whether this is a good alternative or a starting point for your blogging journey. It
+                can be a bit technical, but it's not too difficult; <mark><strong><em>if you read the
+                            documentation</em></strong></mark>, you'll understand it.</p>
+            <p>Of course, you can skip all this hassle and just start a blog on any of the existing platforms, like
+                Substack, Beehiiv, WordPress, or even Framer.</p>
+            <p>Every solution and alternative has its pros and cons. All we need to do is find what we can control,
+                knowing we’re okay even without everything else.</p>
+            <p>The project is structured as follows:</p>
+            <pre><code class="shell language-shell">blogspot/
+├── assets/
+│   ├── scripts
+|    │   ├── create_posts_json.py
+|    │   ├── generate_rss.py
+|    │   ├── one_click.py
+│   ├── posts.json
+│   └── favicon.svg
+├── posts/
+│   ├── category
+|    │   ├── post.md
+|    │   ├── post.md
+│   ├── category
+|    │   ├── post.md
+|    │   ├── post.md
+│   ├── legal
+|    │   ├── terms-and-policies.md
+├── scripts/
+│   └── main.js
+├── styles/
+│   ├── main.css
+│   └── post.css
+├── feed.xml
+├── index.html
+└── post.html
+└── .gitignore
+</code></pre>
+            <h2 id="howitworks">How it works</h2>
+            <p>You write your blog posts in a tool like Obsidian, which saves the files in <code>md</code> format. These
+                files should be stored in the <code>posts</code> folder of your project which means open that folder as
+                a <strong>vault</strong>. After writing your post, you need to edit the front matter metadata, which
+                will help with your SEO. The front matter is the data enclosed in the format shown below. It is
+                available in the markdown template I attached.</p>
+            <pre><code class="yaml language-yaml">---
+title: Your post title [Character Limit: 50-60 characters]
+description: Your post description. Keep it within 160 characters for optimal visibility, as longer descriptions may be cut off in search results.
+social_image: posts/images/image.avif
+author: Your name
+pub_date: 2024-10-22
+pub_time: 09:00 AM
+updated_date: 
+updated_time:
+category: blog
+---
+</code></pre>
+            <p>Make sure the date format is in this style: 09:00 AM. This is the default time, and it will only display
+                the published date. If you need to change the updated date and updated time, ensure it follows the same
+                format as the published date and time. Additionally, if you change the time from 09:00 AM to anything
+                else, that time will also be shown.</p>
+            <p>If you’re using Obsidian, you can switch between source mode and preview mode. In preview mode, editing
+                the meta properties is more user-friendly. You can cross-check by switching to source mode to see it in
+                pure YAML format.</p>
+            <h3 id="onetimeedits">One time edits</h3>
+            <p>You need to make changes in the JavaScript file, the <code>json</code> file, and the RSS feed generator
+                Python script.</p>
+            <h4 id="1mainjs">1. main.js</h4>
+            <p>Make sure you edited this field in relative to your set up.</p>
+            <pre><code class="javascript language-javascript">// Configuration Variables (Update these with your GitHub username, repository name, and optionally folder name)
+
+const githubUsername = "username";
+
+const githubRepositoryName = "repo-name";
+
+const folderName = "subfolder/blogspot"; // Only change this if you're creating a folder inside a repo; otherwise, delete that name and just leave the quotes as it is.
+</code></pre>
+            <p><code>Tip: You can either create a repository for your blog and push all files and folders to it, or create a folder structure inside your repository and make your changes there.</code>
+            </p>
+            <h4 id="2postsjson">2. posts.json</h4>
+            <pre><code class="json language-json">"post_type": "normal"
+
+to
+
+"post_type": "pinned"
+</code></pre>
+            <p>By default, the script will create all post items as <code>normal</code>. After you set one post as
+                pinned, you won’t need to worry about the <code>json</code> file again whenever you run this script, as
+                long as you haven’t changed the details of the pinned post. <mark><strong>Make sure there’s only one
+                        <code>pinned</code> post.</strong></mark> If the <code>json</code> file contains multiple pinned
+                posts, only the first one displayed will be taken into account.</p>
+            <h4 id="3feedxml">3. feed.xml</h4>
+            <p>I created this template with the idea of ditching newsletters and using a Telegram channel to share your
+                post updates. This way, people can subscribe to your blog without revealing any of their data while
+                still staying connected with you.</p>
+            <p>RSS feeds are beneficial because not everyone wants email alerts. If you don’t need this feature, simply
+                delete the Python script, the related file, and the buttons from the project.</p>
+            <p>If you chose to maintain this feature, simply edit some fields in the python script.</p>
+            <pre><code class="python language-python">channel_info = {
+    'title': 'Blogspot',
+    'link': 'https://username.github.io/repository',
+    'description': 'Copy paste the meta description you used in the index.html',
+    'language': 'en-us',
+    'lastBuildDate': last_build_date
+}
+</code></pre>
+            <p>Make sure the <code>pub_date</code> and <code>pub_time</code> in the Markdown files are not empty, as the
+                <code>lastBuildDate</code> is created using these properties. You can check the newly generated
+                <code>feed.xml</code> file to see it in action.</p>
+            <p>After you finish writing your initial posts and editing these one-off tasks, all you need to do is run a
+                Python script <code>one_click.py</code> or run the script separately, but keep in mind that
+                <code>posts.json</code> is needed to generate RSS feed. <strong>It will take only 1 to 2 seconds to
+                    create a <code>json</code> file for post listings and an <code>xml</code> file for the RSS
+                    feed</strong>. You can pin a single post at the top by opening the <code>json</code> file in a code
+                editor or even Notepad and changing the relevant setting.</p>
+            <p>Once you run the script, you’ll be ready to publish. However, please check the <code>feed.xml</code> and
+                <code>posts.json</code> files to ensure everything is correct. It's always good to be your own
+                fact-checker.</p>
+            <h1 id="stillhere">Still here?</h1>
+            <p>You think you can do it? It's not too difficult? Then let's start. </p>
+            <p><button
+                    onclick="window.open('https://github.com/romiojoseph/open-source/tree/main/blogspot', '_blank');">Clone
+                    this blog to your PC</button></p>
+            <ol>
+                <li>
+                    <p>Decide whether to push this project to a repository or a folder. Either way, you'll need a
+                        project folder to open in VS Code.</p>
+                </li>
+                <li>
+                    <p>Create a folder and open it in VS Code: <code>File &gt; Open Folder</code>.</p>
+                </li>
+                <li>
+                    <p>Extract the project files from the downloaded zip and paste them into this folder.</p>
+                </li>
+                <li>
+                    <p>Open <code>index.html</code> in your code editor and open it in the <a
+                            href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">live
+                            server</a>, this will display the main blog page.</p>
+                </li>
+                <li>
+                    <p>Update the blog name, favicon, social images, navigation menu list, Telegram link, social links,
+                        and other personal and unique details in <code>index.html</code> and <code>post.html</code>.</p>
+                </li>
+                <li>
+                    <p>If needed, customize the design. Font sizes and colors are set as variables, so adjustments are
+                        easy.</p>
+                </li>
+                <li>
+                    <p>Modify <code>main.js</code> as needed (e.g., username, repository name, folder structure).</p>
+                </li>
+                <li>
+                    <p>Set up your posts vault: <code>Open Obsidian &gt; Manage vault &gt; Open folder as vault</code>
+                        and select the <code>posts</code> folder. <strong>Note:</strong> Obsidian creates folders
+                        starting with a dot (<code>.</code>), so ensure <code>.gitignore</code> is in the project.</p>
+                </li>
+                <li>
+                    <p>Create folders as categories and files as posts in Obsidian. Use lowercase for file and folder
+                        names.</p>
+                </li>
+                <li>
+                    <p>Ensure the front matter is correct before deciding a post as finished. It's essential for loading
+                        posts, listings, and SEO.</p>
+                </li>
+                <li>
+                    <p>You can use the example <code>supported-styles.md</code> in the docs folder as a template.</p>
+                </li>
+                <li>
+                    <p>Place any images for your posts in the <code>posts/images/</code> directory. Reference the images
+                        in your Markdown files (e.g., <code>posts/images/image.avif</code>). Read <a
+                            href="https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/">why avif
+                            or webp?</a> But for social images jpg or png needed.</p>
+                </li>
+                <li>
+                    <p><strong>Note:</strong> Social media crawlers mainly look at the initial HTML content when they
+                        fetch a page. Since this project uses client-side rendering to convert Markdown to HTML, fast
+                        crawlers might miss dynamic updates. So unique social preview for each post is not possible at
+                        the moment. To make a single preview for all your post detail links, use the default meta
+                        properties in <code>post.html</code>. This will help you manage the title, description, and
+                        other details easily. Also, include a social image for each post, so it shows up in the index
+                        page listing.</p>
+                </li>
+                <li>
+                    <p>Modify the <code>terms-and-policies.md</code> file in the <code>legal</code> folder before your
+                        first commit. Do not change the file name.</p>
+                </li>
+                <li>
+                    <p>Only change the updated date and time if you're modifying a post. If you do, use the same format
+                        as the published date. GitHub tracks commit history, so use this feature carefully.</p>
+                </li>
+                <li>
+                    <p>Each post needs a social image. If you don't have one, create a default image (1200x630 or 1.91:1
+                        ratio), compress it using <a href="https://squoosh.app/">Squoosh</a>, convert it to
+                        <code>avif</code>, and replace <code>default-image.avif</code> in the <code>assets</code>
+                        folder. Do not rename the file.</p>
+                </li>
+                <li>
+                    <p>Ensure you've made the necessary changes to <code>generate_rss.py</code> as mentioned earlier.
+                    </p>
+                </li>
+                <li>
+                    <p>Run the Python script by double-clicking <code>one_click.py</code>. <mark><strong>Note:</strong>
+                            The <code>create_posts_json.py</code> script will correct markdown file names (e.g., remove
+                            extra spaces and fix capitalization) but won't touch the content.</mark></p>
+                </li>
+                <li>
+                    <p>After the script generates <code>posts.json</code> and <code>feed.xml</code>, open them in VS
+                        Code. Pin your important post and ensure the RSS feed displays the latest post at the top.</p>
+                </li>
+                <li>
+                    <p>Now you're ready to push this blog to your GitHub repository or the folder structure you chose.
+                    </p>
+                </li>
+                <li>
+                    <p>This step is optional, but it’s something I do for safety. Consider using separate folders for
+                        staging and production. After you’ve set up your blog for the first time, copy the entire
+                        project folder. Create a new folder, like <code>blog-production</code>, and paste the copied
+                        project there. The original folder can be your staging area.</p>
+                    <p>You can also create a <code>staging</code> folder as a parent and sync it with an online drive
+                        using <a href="https://syncthing.net/">Syncthing</a>. This way, you’ll have a local backup, an
+                        online backup, and a GitHub backup. It’s handy if you have draft files you’re still working on.
+                        When you’re done, just copy the finished files to the production folder and run the script from
+                        there.</p>
+                </li>
+                <li>
+                    <p>Make the repository public to enable GitHub Pages.</p>
+                </li>
+                <li>
+                    <p>After your first commit, go to GitHub repository settings:
+                        <code>Settings &gt; Pages &gt; Branch &gt; Root</code>, then save. If you’re using a folder
+                        structure, the project must be in a <code>docs</code> folder.</p>
+                </li>
+                <li>
+                    <p>If the project is directly in the repository, your blog will be live at
+                        <code>your-username.github.io/repository</code> or add the remaining folders as you created.</p>
+                </li>
+                <li>
+                    <p>When you need to update or publish a new post, copy the latest post or posts, or any new folders,
+                        into the production folder. Then run the <code>one_click.py</code> script to keep everything up
+                        to date. Finally, open GitHub Desktop, verify the changes (especially if any post metadata was
+                        updated), and push the commit.</p>
+                </li>
+            </ol>
+            <h1 id="enjoyyourblog">Enjoy your blog!</h1>
+            <p>You can now start writing and publishing your blog posts. The template provides a clean design, along
+                with the flexibility to customize it to your liking. </p>
+            <h4 id="importantnotes">Important notes:</h4>
+            <ul>
+                <li>I am a non-coder who uses LLMs (Claude, Mistral, Meta AI, ChatGPT, and Gemini) to generate scripts
+                    tailored to my needs. These resources are shared openly for anyone to use.</li>
+                <li>Please keep in mind that I don't have formal coding knowledge, so the code structure, syntax, or
+                    best practices might not be optimal or conventional.</li>
+                <li>I appreciate any feedback, suggestions, or contributions from experienced coders to improve these
+                    scripts and make them more efficient, readable, and maintainable.</li>
+            </ul>
+            <p><img src="media/images/image.png" alt="alt text" title="optional title" /></p>
+            <iframe width="100%" height="450" style="
+        border-radius: 24px; 
+        margin: 24px 0; 
+        overflow: hidden; 
+        opacity: 1;
+    " src="https://www.youtube.com/embed/F_pInoR8Dcs?si=JGmVZr9ufT6lRj14" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+            <p>Tip: You can use the iframe embed code and link YouTube videos and Spotify podcasts/songs.</p>
+            <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">Copilot is the UI for AI, and with Copilot Studio, customers can easily create,
+                    manage, and connect agents to Copilot.<br><br>Today we announced new autonomous agent capabilities
+                    across Copilot Studio and Dynamics 365 to help scale the impact of every individual, team, and
+                    business…</p>&mdash; Satya Nadella (@satyanadella) <a
+                    href="https://twitter.com/satyanadella/status/1848310867709862137?ref_src=twsrc%5Etfw">October 21,
+                    2024</a>
+            </blockquote>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet" data-dnt="true">
+                <p lang="en" dir="ltr">Copilot is the UI for AI, and with Copilot Studio, customers can easily create,
+                    manage, and connect agents to Copilot.<br><br>Today we announced new autonomous agent capabilities
+                    across Copilot Studio and Dynamics 365 to help scale the impact of every individual, team, and
+                    business…</p>&mdash; Satya Nadella (@satyanadella) <a
+                    href="https://twitter.com/satyanadella/status/1848310867709862137?ref_src=twsrc%5Etfw">October 21,
+                    2024</a>
+            </blockquote>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote>
+                <p>Copilot is the UI for AI, and with Copilot Studio, customers can easily create, manage, and connect
+                    agents to Copilot.<br><br>Today we announced new autonomous agent capabilities across Copilot Studio
+                    and Dynamics 365 to help scale the impact of every individual, team, and business</p>
+                <p><cite>- John Wick (Auth 1:02-05)</cite></p>
+            </blockquote>
+            <p><button onclick="window.open('https://telegram.org', '_blank');">Explore more here</button></p>
+            <p><button class="btn-primary" onclick="window.open('https://telegram.org', '_blank');">Explore more
+                    here</button></p>
+            <h5 id="disclosure">Disclosure</h5>
+            <p>I built this with one aim in mind: users should have control over their files. I started thinking about
+                this a long time ago. I run my blog on Substack, but one day, they accidentally disabled my account due
+                to a bug and said my posts didn’t meet their policies. When I contacted them, they said it was a bug and
+                fixed it in a few hours.</p>
+            <p>From that moment, I started taking backups whenever I published new posts, but their export isn’t very
+                user-friendly. It’s provided in HTML, which isn’t great. So, I wrote a script (of course with the help
+                of LLMs) to convert all that HTML to Markdown, and you can access it here. The reason I’m still on
+                Substack is that even though I built this template, they don’t include video and audio in the export.
+                Just text and embedded images. So, I feel it’s a task. If something like that happens again, I will
+                seriously consider moving away.</p>
+        </article>
+
+        <footer>
+            <div class="text-group">
+                <h6 class="comment-question">Got questions or insights?</h6>
+
+                <div class="disclaimer">
+                    <p class="disclaimer">I don't have newsletters here because they can be overwhelming. Instead, you
+                        can stay updated with new posts by subscribing to the RSS feed or joining the Telegram channel
+                        for instant
+                        notifications.</p>
+                    <p class="disclaimer">All opinions shared are mine and don't reflect any organizations I'm
+                        associated with. Feel free to share your thoughts, questions, or feedback in the Telegram
+                        channel.</p>
+                </div>
+
+            </div>
+
+            <div class=" cta-group">
+                <button class="telegram-btn" onclick="window.open('https://t.me/daily_astronomy_pictures', '_blank');">
+                    <i class="ph-duotone ph-telegram-logo"></i>
+                    Join on Telegram
+                </button>
+                <button class="rss-btn" onclick="window.open('./feed.xml', '_blank');">
+                    <i class="ph-duotone ph-rss"></i>
+                    Follow the RSS feed
+                </button>
+            </div>
+
+            <div class="follow-icons">
+                <button class="social-icon"
+                    onclick="window.open('https://bsky.app/profile/romio.substack.com/feed/aaaomgpqdm7kg', '_blank')"
+                    title="Bluesky">
+                    <img src="../assets/bluesky.svg" alt="Bluesky" width="32" height="32">
+                </button>
+
+                <button class="social-icon" onclick="window.open('https://twitter.com', '_blank')" title="Twitter">
+                    <img src="../assets/twitter.svg" alt="Twitter" width="32" height="32">
+                </button>
+
+                <button class="social-icon"
+                    onclick="window.open('https://romiojoseph.github.io/open-source/', '_blank')" title="GitHub">
+                    <img src="../assets/github.svg" alt="GitHub" width="32" height="32">
+                </button>
+
+                <button class="social-icon" onclick="window.open('https://www.youtube.com/@romiojoseph', '_blank')"
+                    title="YouTube">
+                    <img src="../assets/youtube.svg" alt="YouTube" width="32" height="32">
+                </button>
+
+                <button class="social-icon" onclick="window.open('https://in.pinterest.com/romiojoseph/', '_blank')"
+                    title="Pinterest">
+                    <img src="../assets/pinterest.svg" alt="Pinterest" width="32" height="32">
+                </button>
+            </div>
+
+            <div id="footnote">
+                <p class="footnote">© 2024 My Blog</p>
+                <a href="post.html?post=legal/terms-and-policies.md" id="terms-policies-disclaimer"
+                    class="footnote">Terms, Policies, Disclaimer</a>
+            </div>
+        </footer>
+    </main>
+    <script src="..\js\copyLink.js"></script>
+    <script src="..\js\main.js"></script>
+</body>
+
+</html>
