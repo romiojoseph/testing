@@ -1,4 +1,5 @@
 @import url('main.css');
+@import url('icons.css');
 
 body {
     font-family: "Inter", sans-serif;
@@ -44,7 +45,7 @@ body {
 
 #post-title {
     font-family: "Lora", serif;
-    font-size: var(--font-size-heading2);
+    font-size: var(--font-size-heading3);
     font-weight: 700;
     padding: 0;
     margin: 0;
@@ -100,25 +101,30 @@ body {
 }
 
 #copy-link {
+    margin: 0;
+    padding: 12px 20px;
+    width: fit-content;
+    border-radius: 50px;
+    border: 2px solid var(--obsidian-2);
+    background-color: radial-gradient(50% 50% at 50% 50%, var(--obsidian-0) 0%, var(--obsidian-2) 100%);
+    color: var(--obsidian-8);
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     gap: 8px;
     align-items: center;
-    font: 600 var(--font-size-body) "Inter", sans-serif;
-    margin: 0;
-    color: var(--obsidian-11);
-    padding: 12px 24px;
-    border: 2px solid var(--obsidian-2);
-    border-radius: 50px;
+    font-family: "Inter", sans-serif;
+    font-size: var(--font-size-body);
+    font-weight: 600;
     cursor: pointer;
+    box-shadow: inset 0px 2px 4px var(--obsidian-2);
     transition: .3s ease-out;
-    background-color: var(--obsidian-1);
+    white-space: nowrap;
 }
 
 #copy-link:hover {
-    background-color: var(--obsidian-2);
+    border: 2px solid var(--obsidian-3);
     color: var(--obsidian-9);
-    box-shadow: 2px 4px 0px 0px var(--obsidian-3);
+    box-shadow: inset 0px -4px 4px var(--obsidian-3);
     text-decoration: none;
 }
 
@@ -144,6 +150,7 @@ img {
     margin-bottom: 24px;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
+    object-fit: cover;
 }
 
 img:hover {
@@ -182,7 +189,7 @@ h3 {
     margin: 0;
     color: var(--obsidian-11);
     line-height: 1.2;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     margin-top: 40px;
 }
 
@@ -194,7 +201,7 @@ h4 {
     margin: 0;
     color: var(--obsidian-11);
     line-height: 1.2;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     margin-top: 40px;
 }
 
@@ -206,7 +213,7 @@ h5 {
     margin: 0;
     color: var(--obsidian-11);
     line-height: 1.4;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     margin-top: 40px;
 }
 
@@ -218,7 +225,7 @@ h6 {
     margin: 0;
     color: var(--obsidian-11);
     line-height: 1.4;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     margin-top: 40px;
 }
 
@@ -262,17 +269,18 @@ ol {
 }
 
 li {
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 
 }
 
 blockquote {
-    padding: 32px 32px 12px 32px;
-    border-radius: 24px;
-    border: 2px solid #f5f5f4;
-    background-color: #fafaf9;
-    box-shadow: 2px 4px 0px 0px #f5f5f4;
+    padding: 40px 40px 20px 40px;
+    border-radius: 32px;
+    box-sizing: border-box;
+    border: 2px solid var(--obsidian-2);
+    background-color: var(--obsidian-0);
+    box-shadow: 0px 0px 0px 6px var(--obsidian-1);
     margin: 40px 0;
 }
 
@@ -286,7 +294,7 @@ blockquote p {
     margin: 0;
     padding-bottom: 20px;
     word-wrap: break-word;
-    white-space: pre-wrap;
+    white-space: normal;
 }
 
 cite {
@@ -296,8 +304,8 @@ cite {
     font-style: italic;
     color: var(--obsidian-8);
     display: block;
-    text-align: right;
-    margin-top: 8px;
+    text-align: left;
+    margin-top: 16px;
 }
 
 a {
@@ -308,7 +316,7 @@ a {
     color: var(--obsidian-11);
     transition: color 0.3s ease-in-out, text-decoration-color 0.3s ease-in-out;
     word-wrap: break-word;
-    white-space: pre-wrap;
+    white-space: normal;
 }
 
 a:hover {
@@ -351,10 +359,10 @@ code {
 }
 
 pre {
-    background-color: #ffffff;
-    padding: 24px;
+    background-color: #101010;
+    padding: 32px;
     border: 2px solid var(--obsidian-2);
-    border-radius: 24px;
+    border-radius: 32px;
     box-sizing: border-box;
     box-shadow: 0px 0px 0px 4px var(--obsidian-1);
     margin-top: 24px;
@@ -384,20 +392,60 @@ tr:hover {
 }
 
 mark {
-    background-color: #f2f0e7;
-    color: var(--obsidian-11);
+    background-color: #0e6bff !important;
+    color: var(--obsidian-0);
     padding: 4px 8px 4px 8px;
     border-radius: 4px;
+}
+
+mark code {
+    color: inherit;
 }
 
 iframe {
     margin-top: 24px;
     margin-bottom: 24px;
     padding: 0;
-    border-radius: 24px;
+    border-radius: 8px;
     width: 100%;
-    height: 450px;
+    height: 484px;
+    display: block;
 }
+
+.bluesky-embed {
+    max-width: 600px;
+    width: 100%;
+    margin: 24px auto;
+    display: block;
+}
+
+.bluesky-embed iframe {
+    width: 100%;
+    border: none;
+    display: block;
+    height: auto;
+    flex-grow: 0;
+}
+
+.twitter-tweet {
+    max-width: 600px;
+    width: 100%;
+    margin: 10px auto;
+    display: block;
+}
+
+.youtube-embed {
+    max-width: 100%;
+    margin: 10px auto;
+    display: block;
+}
+
+.youtube-embed iframe {
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
 
 button {
     font-family: "Inter", sans-serif;
@@ -412,14 +460,15 @@ button {
     height: fit-content;
     cursor: pointer;
     transition: .3s ease-out;
-    background-color: var(--obsidian-1);
+    background-color: radial-gradient(50% 50% at 50% 50%, var(--obsidian-0) 0%, var(--obsidian-2) 100%);
     white-space: nowrap;
+    box-shadow: inset 0px 2px 4px var(--obsidian-2);
 }
 
 button:hover {
-    background-color: var(--obsidian-2);
+    border: 2px solid var(--obsidian-3);
     color: var(--obsidian-9);
-    box-shadow: 2px 4px 0px 0px var(--obsidian-3);
+    box-shadow: inset 0px -4px 4px var(--obsidian-3);
     text-decoration: none;
 }
 
@@ -428,10 +477,10 @@ button:hover {
     padding: 12px 24px;
     width: fit-content;
     border-radius: 50px;
-    border: none;
-    background-color: #0866FF;
+    border: 2px solid #478dff;
+    background-color: #0e6bff;
     color: var(--obsidian-0);
-    box-shadow: inset 0px 0px 8px 4px rgba(255, 255, 255, 0.24);
+    box-shadow: inset 0px 2px 6px rgba(255, 255, 255, 0.64);
     display: flex;
     flex-direction: row;
     gap: 12px;
@@ -440,16 +489,50 @@ button:hover {
     font-size: var(--font-size-body);
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.5s ease-out, color 0.5s ease-out, box-shadow 0.3s ease-out;
+    transition: box-shadow 0.3s ease-out;
     white-space: nowrap;
 }
 
 .btn-primary:hover {
     background-color: #0e6bff;
     color: var(--obsidian-0);
-    box-shadow: inset 0px 0px 12px 4px rgba(255, 255, 255, 0.32), 2px 4px 0px 0px #9FC4FF;
+    border: 2px solid #478dff;
+    box-shadow: inset 0px -2px 4px rgba(255, 255, 255, 0.48);
 }
 
+.progress-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--obsidian-3);
+    z-index: 1001;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #0e6bff;
+    transition: width 0.32s ease;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 32px;
+    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+audio {
+    width: 100%;
+    border-radius: 24px;
+    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
 
 /* Media Queries for Responsiveness */
 @media (max-width: 959px) {
@@ -465,7 +548,7 @@ button:hover {
     }
 
     iframe {
-        height: 350px;
+        height: 375px;
     }
 
 }
@@ -475,6 +558,7 @@ button:hover {
     .detail-post-heading {
         padding: 32px 24px;
     }
+
 
     #post-content {
         padding: 16px 24px;
@@ -490,6 +574,6 @@ button:hover {
     }
 
     iframe {
-        height: 228px;
+        height: 256px;
     }
 }
