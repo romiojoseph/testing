@@ -10,7 +10,7 @@
     <meta property="og:description"
         content="This documentation explains how to set up and use the Blogspot template to create your own personal blog."
         id="og-description">
-    <<<<<<< HEAD <meta property="og:image" content="blog\media\images\social.png" id="og-image">
+    <<<<<<< HEAD <meta property="og:image" content="..\blog\media\images\social.png" id="og-image">
         =======
         <meta property="og:image" content="..\blog\media\images\social-image.png" id="og-image">
         >>>>>>> b5f9ca5643deb945371220a00afd8b67327846c3
@@ -204,16 +204,19 @@ to
 </code></pre>
             <p>Make sure the <code>pub_date</code> and <code>pub_time</code> in the Markdown files are not empty, as the
                 <code>lastBuildDate</code> is created using these properties. You can check the newly generated
-                <code>feed.xml</code> file to see it in action.</p>
+                <code>feed.xml</code> file to see it in action.
+            </p>
             <p>After you finish writing your initial posts and editing these one-off tasks, all you need to do is run a
                 Python script <code>one_click.py</code> or run the script separately, but keep in mind that
                 <code>posts.json</code> is needed to generate RSS feed. <strong>It will take only 1 to 2 seconds to
                     create a <code>json</code> file for post listings and an <code>xml</code> file for the RSS
                     feed</strong>. You can pin a single post at the top by opening the <code>json</code> file in a code
-                editor or even Notepad and changing the relevant setting.</p>
+                editor or even Notepad and changing the relevant setting.
+            </p>
             <p>Once you run the script, you’ll be ready to publish. However, please check the <code>feed.xml</code> and
                 <code>posts.json</code> files to ensure everything is correct. It's always good to be your own
-                fact-checker.</p>
+                fact-checker.
+            </p>
             <h1 id="stillhere">Still here?</h1>
             <p>You think you can do it? It's not too difficult? Then let's start. </p>
             <p><button
@@ -289,7 +292,8 @@ to
                     <p>Each post needs a social image. If you don't have one, create a default image (1200x630 or 1.91:1
                         ratio), compress it using <a href="https://squoosh.app/">Squoosh</a>, convert it to
                         <code>avif</code>, and replace <code>default-image.avif</code> in the <code>assets</code>
-                        folder. Do not rename the file.</p>
+                        folder. Do not rename the file.
+                    </p>
                 </li>
                 <li>
                     <p>Ensure you've made the necessary changes to <code>generate_rss.py</code> as mentioned earlier.
@@ -325,11 +329,13 @@ to
                 <li>
                     <p>After your first commit, go to GitHub repository settings:
                         <code>Settings &gt; Pages &gt; Branch &gt; Root</code>, then save. If you’re using a folder
-                        structure, the project must be in a <code>docs</code> folder.</p>
+                        structure, the project must be in a <code>docs</code> folder.
+                    </p>
                 </li>
                 <li>
                     <p>If the project is directly in the repository, your blog will be live at
-                        <code>your-username.github.io/repository</code> or add the remaining folders as you created.</p>
+                        <code>your-username.github.io/repository</code> or add the remaining folders as you created.
+                    </p>
                 </li>
                 <li>
                     <p>When you need to update or publish a new post, copy the latest post or posts, or any new folders,

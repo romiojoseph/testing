@@ -10,7 +10,7 @@
     <meta property="og:description"
         content="This documentation explains how to set up the Blogspot template for the first time and then use it seamlessly afterward to create your personal blog."
         id="og-description">
-    <meta property="og:image" content="..\blog\media\images\social.png" id="og-image">
+    <meta property="og:image" content="\..\blog\media\images\social.png" id="og-image">
     <meta property="og:type" content="blog">
     <meta name="author" content="Romio" id="meta-author">
     <meta name="description"
@@ -163,7 +163,8 @@ category: doc
 </code></pre>
             <p>Leave the updated property empty if there’s nothing to add. If no social image is attached to a post, the
                 <code>default-social-image.png</code> will be applied automatically. You can replace it with your own
-                image, but ensure it has a size of 1200x630 pixels or a 1.91:1 ratio.</p>
+                image, but ensure it has a size of 1200x630 pixels or a 1.91:1 ratio.
+            </p>
             <h4 id="frontmatter">Front matter</h4>
             <p>If you’re using Obsidian, you can switch between source mode and preview mode. In preview mode, editing
                 the meta properties is more user-friendly. You can cross-check by switching to source mode to see it in
@@ -190,11 +191,13 @@ category: doc
                 the <code>assets</code> folder. To pin a post, open <code>posts.json</code> in a text editor and change
                 <code>"post_type": "regular"</code> to <code>"post_type": "pinned"</code>. Only one pinned post is
                 supported. From this point on, each build will retain the pin status, while other updates will be
-                reflected.</p>
+                reflected.
+            </p>
             <p>If you need to delete an HTML post, manually delete the HTML file and remove its entry from both
                 <code>feed.xml</code> and <code>posts.json</code>. This step is intentional to avoid accidental
                 deletions. Running this script will also create a log file <code>build.log</code> for cross checking
-                with future builds.</p>
+                with future builds.
+            </p>
             <h1 id="stillhere">Still here?</h1>
             <p>Think you can handle it? It’s not too tough! Let’s get started.</p>
             <p><button class="btn-primary"
@@ -203,7 +206,8 @@ category: doc
                 </button></p>
             <ol>
                 <li>Create a folder with your <code>blogname-staging</code> and open it in VS Code:
-                    <code>File &gt; Open Folder</code>.</li>
+                    <code>File &gt; Open Folder</code>.
+                </li>
                 <li>Extract the project files from the downloaded zip and paste them into this folder.</li>
                 <li>Open <code>index.html</code> in your code editor and launch it on <a
                         href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">live server</a>
@@ -234,7 +238,8 @@ category: doc
                 <li>Each post needs a social image. If you don’t have one, create a default image (1200x630 or 1.91:1
                     ratio), compress it using <a href="https://squoosh.app/">Squoosh</a>, convert it to
                     <code>png</code>, and replace <code>default-social-image.png</code> in the <code>assets</code>
-                    folder. Do not rename the file.</li>
+                    folder. Do not rename the file.
+                </li>
                 <li>In the <code>build.js</code> file, add your details for proper XML file creation. Open it, search
                     for <code>const channelInfo</code>, and replace your details in all those fields (three separate
                     blocks in total).</li>
@@ -247,12 +252,14 @@ category: doc
                     <code>404.html</code>, <code>feed.xml</code>, <code>terms-and-policies.html</code>,
                     <code>robots.txt</code>. Create a new folder with your blog name and paste the copied project there.
                     The original folder can be your staging area, containing all other build, demo scripts, posts
-                    folders and all other dependencies.</li>
+                    folders and all other dependencies.
+                </li>
                 <li>Finally, open GitHub Desktop, verify the changes (especially if any metadata was updated), and push
                     the commit.</li>
                 <li>Make the repository public to enable GitHub Pages.</li>
                 <li>After your first commit, go to the GitHub repository settings:
-                    <code>Settings &gt; Pages &gt; Branch &gt; Root</code>, then save.</li>
+                    <code>Settings &gt; Pages &gt; Branch &gt; Root</code>, then save.
+                </li>
                 <li>If the project is directly in the repository, your blog will be live at
                     <code>your-username.github.io/repository/index.html</code> or add the remaining folders as created.
                 </li>
