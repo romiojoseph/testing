@@ -10,7 +10,7 @@
     <meta property="og:description"
         content="This documentation explains how to set up the Blogspot template for the first time and then use it seamlessly afterward to create your personal blog."
         id="og-description">
-    <meta property="og:image" content="..\blog\media\images\social.png" id="og-image">
+    <meta property="og:image" content="https://romiojoseph.github.io/testing/blog/media/images/blog/media/images/social.png" id="og-image">
     <meta property="og:type" content="blog">
     <meta name="author" content="Romio" id="meta-author">
     <meta name="description"
@@ -124,6 +124,7 @@
 │   └── post.html
 └── build.js
 └── live-preview.js
+└── cross-check.js
 └── terms-and-policies.html
 └── 404.html
 └── robots.txt
@@ -170,7 +171,7 @@ category: doc
 <li>Use the <code>supported-styles.md</code> file in the docs folder as a template.</li>
 <li>Place any images for your posts in the <code>posts/media/images</code> directory. Reference the images in your Markdown files (e.g., <code>media/images/image.avif</code>). Read <a href="https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/">why avif or webp?</a>. But for social images, use <code>jpg</code> or <code>png</code>. </li>
 <li>You can also add videos and audio. Place them in the appropriate folders inside the media folder and check the template for the code snippet. Be mindful of file sizes.</li>
-<li>Modify the <code>terms-and-policies.md</code> file in the <code>legal</code> folder before your first commit. You can build it separately and use the draft status to exclude it from future builds. Then, replace that file as <code>terms-and-policies.html</code> in the root folder.</li>
+<li>Modify the <code>terms-and-policies.md</code> file in the <code>legal</code> folder before your first commit. You can build it separately and use the draft status to exclude it from future builds. Then, replace that file as <code>terms-and-policies.html</code> in the root folder. Make sure to delete this item's entry from your JSON and XML files if you build this.</li>
 <li>Only update the date and time if you're modifying a post. If you do, use the same format as the published date. GitHub tracks commit history, so use this feature carefully.</li>
 <li>Each post needs a social image. If you don’t have one, create a default image (1200x630 or 1.91:1 ratio), compress it using <a href="https://squoosh.app/">Squoosh</a>, convert it to <code>png</code>, and replace <code>default-social-image.png</code> in the <code>assets</code> folder. Do not rename the file.</li>
 <li>In the <code>build.js</code> file, add your details for proper XML file creation. Open it, search for <code>const channelInfo</code>, and replace your details in all those fields (three separate blocks in total).</li>

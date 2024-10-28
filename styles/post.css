@@ -129,8 +129,8 @@ body {
 }
 
 #copy-link:active {
-    background-color: var(--obsidian-2);
-    border: 2px solid var(--obsidian-3);
+    background-color: radial-gradient(50% 50% at 50% 50%, var(--obsidian-0) 0%, var(--obsidian-2) 100%);
+    border: 2px solid var(--obsidian-2);
 }
 
 hr {
@@ -469,6 +469,13 @@ button:hover {
     border: 2px solid var(--obsidian-3);
     color: var(--obsidian-9);
     box-shadow: inset 0px -4px 4px var(--obsidian-3);
+    text-decoration: none;
+}
+
+button:active {
+    border: 2px solid var(--obsidian-2);
+    color: var(--obsidian-11);
+    box-shadow: inset 0px 2px 4px var(--obsidian-2);
     text-decoration: none;
 }
 

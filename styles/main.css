@@ -222,6 +222,12 @@ div {
     box-shadow: inset 0px -3px 4px var(--obsidian-3);
 }
 
+.rss-btn:active {
+    border: 2px solid var(--obsidian-3);
+    color: var(--obsidian-11);
+    box-shadow: inset 0px 4px 4px var(--obsidian-2);
+}
+
 .post-image {
     margin: 0;
 }
