@@ -44,7 +44,7 @@ async function loadAndFilterPosts(selectedCategory) {
                 <p class="post-image"><img src="${pinnedPost.social_image || 'assets/default-image.avif'}" alt="${pinnedPost.title} image" class="main-image"></p>
                 <div class="main-top">
                     <div class="post-info">
-                        <p class="category"><a href="#">${pinnedPost.category || 'Blogging'}</a></p>
+                        <p class="category">${pinnedPost.category || 'Blogging'}</a></p>
                         <p class="main-post-pub-date">${formatDate(pinnedPost.published)}</p>
                     </div>
                     <h2 class="main-post-heading"><a href="${pinnedPost.file}">${pinnedPost.title}</a></h2>

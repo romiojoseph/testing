@@ -3,57 +3,43 @@
         <channel>
             <title>Blogspot</title>
             <link>https://romiojoseph.github.io/open-source/templates/blogspot</link>
-            <description>A simple markdown to html blog</description>
+            <description>Blogspot is a custom Static Site Generator (SSG) built with Node.js and Showdown.js. It converts Markdown files from Obsidian into fast, scalable, and customizable static HTML websites. Perfect for bloggers, writers, and developers seeking simplicity and flexibility.</description>
             <language>en-us</language>
-            <lastBuildDate>Fri, 27 Dec 2024 10:30:00 GMT</lastBuildDate>
+            <lastBuildDate>Wed, 30 Oct 2024 07:38:00 GMT</lastBuildDate>
             
             <item>
-                <title>Blogspot template doc</title>
-                <link>https:/romiojoseph.github.io/open-source/templates/blogspot/blog/blogspot-template-doc.html</link>
-                <description>This documentation explains how to set up the Blogspot template for the first time and then use it seamlessly afterward to create your personal blog.</description>
-                <pubDate>Fri, 27 Dec 2024 10:30:00 GMT</pubDate>
+                <title>Why I created this template</title>
+                <link>https:/romiojoseph.github.io/open-source/templates/blogspot/blog/why-i-created-this-template.html</link>
+                <description>I always wanted to create things that come to my mind. A while ago, Framer made a lot of things possible, sparking my curiosity. And so I began.</description>
+                <pubDate>Wed, 30 Oct 2024 07:38:00 GMT</pubDate>
             </item>
         
             <item>
                 <title>Supported styles</title>
                 <link>https:/romiojoseph.github.io/open-source/templates/blogspot/blog/supported-styles.html</link>
-                <description>Check out thee supported styles, tips and more.</description>
-                <pubDate>Fri, 27 Dec 2024 10:30:00 GMT</pubDate>
+                <description>This documentation covers the supported Markdown styles and tags for this project. Use this as a quick reference to format your content effectively.</description>
+                <pubDate>Sun, 27 Oct 2024 16:28:00 GMT</pubDate>
             </item>
         
             <item>
                 <title>Blogspot template doc</title>
-                <link>https:/romiojoseph.github.io/open-source/templates/blogspot/blog/blogspot-template--documentation-1.html</link>
-                <description>This documentation explains how to set up and use the Blogspot template to create your own personal blog.</description>
-                <pubDate>Mon, 23 Dec 2024 21:03:00 GMT</pubDate>
+                <link>https:/romiojoseph.github.io/open-source/templates/blogspot/blog/blogspot-template-doc.html</link>
+                <description>This documentation explains how to set up the Blogspot template for the first time and then use it seamlessly afterward to create your personal blog.</description>
+                <pubDate>Sun, 27 Oct 2024 07:38:00 GMT</pubDate>
             </item>
         
             <item>
-                <title>Simple Test Blog Entry</title>
-                <link>https:/romiojoseph.github.io/open-source/templates/blogspot/blog/simple-test-blog-entry.html</link>
-                <description>A simple blog post used for testing how the blog appears and functions. It's a small step toward getting everything ready for future updates.</description>
-                <pubDate>Tue, 22 Oct 2024 21:16:00 GMT</pubDate>
+                <title>Markdown and HTML: History, "evolution", and 'current' state</title>
+                <link>https:/romiojoseph.github.io/open-source/templates/blogspot/blog/markdown-and-html.html</link>
+                <description>Explore the detailed histories, key milestones, and current states of Markdown and HTML. Discover their origins, evolution, and significance in web development.</description>
+                <pubDate>Wed, 23 Oct 2024 14:46:00 GMT</pubDate>
             </item>
         
             <item>
-                <title>Test Post for Blog Setup</title>
-                <link>https:/romiojoseph.github.io/open-source/templates/blogspot/blog/test-post-for-blog-setup.html</link>
-                <description>Running a test with this blog post to check how the design and structure behave. It’s part of making sure everything works smoothly. More content coming soon.</description>
-                <pubDate>Tue, 22 Oct 2024 21:16:00 GMT</pubDate>
-            </item>
-        
-            <item>
-                <title>Testing a Simple Blog Post</title>
-                <link>https:/romiojoseph.github.io/open-source/templates/blogspot/blog/testing-a-simple-blog-post.html</link>
-                <description>This is just a simple post used to test how things look and work. Feel free to browse and see what fits.</description>
-                <pubDate>Tue, 22 Oct 2024 21:16:00 GMT</pubDate>
-            </item>
-        
-            <item>
-                <title>Trying Out a New Blog Post</title>
-                <link>https:/romiojoseph.github.io/open-source/templates/blogspot/blog/trying-out-a-new-blog-post.html</link>
-                <description>This post is a quick test to see how everything looks and works. It's not much, just checking things out. Stick around for more updates.</description>
-                <pubDate>Tue, 22 Oct 2024 21:16:00 GMT</pubDate>
+                <title>Why blog?</title>
+                <link>https:/romiojoseph.github.io/open-source/templates/blogspot/blog/blogging-over-social-media.html</link>
+                <description>A personal perspective on how blogging offers more freedom and control than social media and why sharing your ideas and experiences in your own space matters.</description>
+                <pubDate>Fri, 18 Oct 2024 02:46:00 GMT</pubDate>
             </item>
         
         </channel>

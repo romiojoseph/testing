@@ -14,6 +14,13 @@
     --obsidian-10: #18181b;
     --obsidian-11: #09090b;
 
+    --primary: #0866FF;
+    --primary-accent: #478dff;
+
+    --font-family-heading: "Lora", serif;
+    --font-family-body: "Inter", sans-serif;
+    --font-family-mono: "Azeret Mono", monospace;
+
     --font-size-heading1: 57px;
     --font-size-heading2: 48px;
     --font-size-heading3: 40px;
@@ -27,7 +34,7 @@
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-family-body);
     padding: 0;
     margin: 0;
     -webkit-font-smoothing: antialiased;
@@ -71,7 +78,7 @@ header {
 }
 
 .blog-name {
-    font-family: "Lora", serif;
+    font-family: var(--font-family-heading);
     font-weight: 700;
     font-size: var(--font-size-heading5);
     color: var(--obsidian-11);
@@ -90,26 +97,26 @@ header {
     width: fit-content;
     border-radius: 50px;
     border: 2px solid var(--obsidian-11);
-    background-color: var(--obsidian-9);
+    background-color: var(--obsidian-11);
     color: var(--obsidian-0);
     display: flex;
     flex-direction: row;
     gap: 8px;
     align-items: center;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-family-body);
     font-size: var(--font-size-body);
     font-weight: 600;
     cursor: pointer;
     transition: .3s ease-out;
     white-space: nowrap;
-    box-shadow: inset 0px 4px 4px rgba(161, 161, 170, 0.64);
+    box-shadow: inset 0px 2px 4px var(--obsidian-5);
 }
 
 .telegram-btn:hover {
     background-color: var(--obsidian-10);
     border: 2px solid var(--obsidian-10);
     color: var(--obsidian-2);
-    box-shadow: inset 0px -2px 4px rgba(161, 161, 170, 0.8);
+    box-shadow: inset 0px -2px 4px var(--obsidian-5);
 }
 
 #category-navigation {
@@ -137,7 +144,7 @@ header {
 }
 
 #category-navigation a {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-family-body);
     font-size: var(--font-size-body);
     color: var(--obsidian-10);
     transition: 0.2s ease-in-out;
@@ -190,7 +197,7 @@ div {
     grid-template-columns: repeat(2, minmax(50px, 1fr));
     justify-items: start;
     grid-template-rows: repeat(1, minmax(0, 1fr));
-    grid-row-gap: 56px;
+    grid-row-gap: 40px;
     grid-column-gap: 32px;
     box-sizing: border-box;
 }
@@ -200,18 +207,18 @@ div {
     padding: 12px 20px;
     width: fit-content;
     border-radius: 50px;
-    border: 2px solid var(--obsidian-3);
-    background: radial-gradient(100% 100% at 100% 100%, var(--obsidian-0) 0%, var(--obsidian-2) 100%);
+    border: 2px solid var(--obsidian-2);
+    background: radial-gradient(100% 100% at 100% 100%, var(--obsidian-2) 0%, var(--obsidian-0) 100%);
     color: var(--obsidian-8);
     display: flex;
     flex-direction: row;
     gap: 8px;
     align-items: center;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-family-body);
     font-size: var(--font-size-body);
     font-weight: 600;
     cursor: pointer;
-    box-shadow: inset 0px 4px 4px var(--obsidian-2);
+    box-shadow: inset 0px 2px 4px var(--obsidian-1);
     transition: .3s ease-out;
     white-space: nowrap;
 }
@@ -250,8 +257,9 @@ div {
     margin: 0;
 }
 
+
 .main-post-heading {
-    font-family: "Lora", serif;
+    font-family: var(--font-family-heading);
     font-size: var(--font-size-heading2);
     font-weight: 700;
     padding: 0;
@@ -260,7 +268,7 @@ div {
 }
 
 .main-post-subtitle {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-family-body);
     font-size: var(--font-size-subtitle);
     font-weight: 400;
     padding: 0;
@@ -272,7 +280,7 @@ div {
 
 .category,
 .main-post-pub-date {
-    font-family: "DM Mono", monospace;
+    font-family: var(--font-family-mono);
     font-size: var(--font-size-label);
     font-weight: 700;
     text-transform: uppercase;
@@ -295,25 +303,25 @@ div {
     width: fit-content;
     border-radius: 50px;
     border: 2px solid var(--obsidian-11);
-    background-color: var(--obsidian-9);
+    background-color: var(--obsidian-11);
     color: var(--obsidian-0);
     display: flex;
     flex-direction: row;
     gap: 8px;
     align-items: center;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-family-body);
     font-size: var(--font-size-body);
     font-weight: 500;
     cursor: pointer;
     transition: .3s ease-out;
-    box-shadow: inset 0px 4px 4px rgba(161, 161, 170, 0.64);
+    box-shadow: inset 0px 2px 4px var(--obsidian-5);
 }
 
 .read-btn:hover {
     background-color: var(--obsidian-10);
     border: 2px solid var(--obsidian-10);
     color: var(--obsidian-2);
-    box-shadow: inset 0px -2px 4px rgba(161, 161, 170, 0.8);
+    box-shadow: inset 0px -2px 6px var(--obsidian-5);
 }
 
 .main-top {
@@ -353,10 +361,6 @@ div {
     transition: .3s ease-out;
     height: fit-content;
     box-sizing: border-box;
-}
-
-.normal-post:hover {
-    transform: scale(1.01);
 }
 
 #main-post {
@@ -399,7 +403,7 @@ div {
 
 
 .normal-post-heading {
-    font-family: "Lora", serif;
+    font-family: var(--font-family-heading);
     font-size: var(--font-size-heading5);
     font-weight: 700;
     line-height: 1.4;
@@ -410,7 +414,7 @@ div {
 
 
 .normal-post-subtitle {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-family-body);
     font-size: var(--font-size-body);
     font-weight: 400;
     padding: 0;
@@ -487,7 +491,7 @@ footer {
 .disclaimer {
     width: 100%;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-family-body);
     font-size: var(--font-size-body);
     font-weight: 400;
     color: var(--obsidian-9);
@@ -518,7 +522,7 @@ footer {
 }
 
 .footnote {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-family-body);
     font-size: var(--font-size-caption);
     font-weight: 400;
     color: var(--obsidian-9);
@@ -557,7 +561,7 @@ a:has(.read-btn):hover {
 }
 
 .comment-question {
-    font-family: "Lora", serif;
+    font-family: var(--font-family-heading);
     font-weight: 700;
     font-size: var(--font-size-heading6);
     color: var(--obsidian-11);
@@ -638,6 +642,7 @@ a:has(.read-btn):hover {
     .main-image {
         width: 100%;
         height: auto;
+        border-radius: 24px;
     }
 
     .normal-image {
