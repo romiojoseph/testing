@@ -29,17 +29,24 @@
             </item>
         
             <item>
-                <title>Markdown and HTML: History, "evolution", and 'current' state</title>
-                <link>https:/romiojoseph.github.io/open-source/templates/blogspot/blog/markdown-and-html.html</link>
-                <description>Explore the detailed histories, key milestones, and current states of Markdown and HTML. Discover their origins, evolution, and significance in web development.</description>
-                <pubDate>Wed, 23 Oct 2024 14:46:00 GMT</pubDate>
-            </item>
-        
-            <item>
                 <title>Why blog?</title>
                 <link>https:/romiojoseph.github.io/open-source/templates/blogspot/blog/blogging-over-social-media.html</link>
                 <description>A personal perspective on how blogging offers more freedom and control than social media and why sharing your ideas and experiences in your own space matters.</description>
-                <pubDate>Fri, 18 Oct 2024 02:46:00 GMT</pubDate>
+                <pubDate>Thu, 24 Oct 2024 02:46:00 GMT</pubDate>
+            </item>
+        
+            <item>
+                <title>Script execution demo</title>
+                <link>https:/romiojoseph.github.io/open-source/templates/blogspot/blog/script-execution-demo.html</link>
+                <description>View a step-by-step demonstration of the script execution process, covering initialization, updates, and synchronization.</description>
+                <pubDate>Wed, 23 Oct 2024 17:50:00 GMT</pubDate>
+            </item>
+        
+            <item>
+                <title>Markdown and HTML: History, "evolution", and 'current' state</title>
+                <link>https:/romiojoseph.github.io/open-source/templates/blogspot/blog/markdown-and-html.html</link>
+                <description>Explore the detailed histories, key milestones, and current states of Markdown and HTML. Discover their origins, evolution, and significance in web development.</description>
+                <pubDate>Wed, 16 Oct 2024 14:46:00 GMT</pubDate>
             </item>
         
         </channel>

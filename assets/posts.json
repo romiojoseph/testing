@@ -33,25 +33,36 @@
         "post_type": "pinned"
     },
     {
-        "file": "blog\\markdown-and-html.html",
-        "title": "Markdown and HTML: History, \"evolution\", and 'current' state",
-        "description": "Explore the detailed histories, key milestones, and current states of Markdown and HTML. Discover their origins, evolution, and significance in web development.",
-        "social_image": "assets/default-social-image.png",
-        "author": "Romio",
-        "published": "2024-10-23T14:46:00.000Z",
-        "updated": null,
-        "category": "resources",
-        "post_type": "regular"
-    },
-    {
         "file": "blog\\blogging-over-social-media.html",
         "title": "Why blog?",
         "description": "A personal perspective on how blogging offers more freedom and control than social media and why sharing your ideas and experiences in your own space matters.",
         "social_image": "blog/media/images/blogging.png",
         "author": "Romio",
-        "published": "2024-10-18T02:46:00.000Z",
+        "published": "2024-10-24T02:46:00.000Z",
         "updated": null,
         "category": "opinions",
+        "post_type": "regular"
+    },
+    {
+        "file": "blog\\script-execution-demo.html",
+        "title": "Script execution demo",
+        "description": "View a step-by-step demonstration of the script execution process, covering initialization, updates, and synchronization.",
+        "social_image": "blog/media/images/terminal.png",
+        "author": "Romio",
+        "published": "2024-10-23T17:50:00.000Z",
+        "updated": null,
+        "category": "docs",
+        "post_type": "regular"
+    },
+    {
+        "file": "blog\\markdown-and-html.html",
+        "title": "Markdown and HTML: History, \"evolution\", and 'current' state",
+        "description": "Explore the detailed histories, key milestones, and current states of Markdown and HTML. Discover their origins, evolution, and significance in web development.",
+        "social_image": "assets/default-social-image.png",
+        "author": "Romio",
+        "published": "2024-10-16T14:46:00.000Z",
+        "updated": null,
+        "category": "resources",
         "post_type": "regular"
     }
 ]
