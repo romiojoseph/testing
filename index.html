@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Quote for Your Day</title>
+    <meta name="description"
+        content="Let the words speak to your soul. Discover a daily quote that resonates with your current state of mind.">
+    <meta property="og:image" content="assets/social-image.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" />
+
+    <link rel="stylesheet" href="styles.css">
+    <meta name="robots" content="index, follow">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>A quote for your day</h1>
+            <div class="subtitle">
+                Pick a card based on your mood and discover a new quote every day!
+            </div>
+        </div>
+
+        <div class="mood-container">
+            <div class="mood-card happy-mood" data-mood="happy">
+                <div class="icon-container">
+                    <img src="assets/happy.svg" alt="You're mood is happy now">
+                </div>
+                <h5>Happy</h5>
+            </div>
+            <div class="mood-card chill-mood" data-mood="chill">
+                <div class="icon-container">
+                    <img src="assets/chill.svg" alt="You're mood is chill now">
+                </div>
+                <h5>Chill</h5>
+            </div>
+            <div class="mood-card tired-mood" data-mood="tired">
+                <div class="icon-container">
+                    <img src="assets/tired.svg" alt="You're mood is tired now">
+                </div>
+                <h5>Tired</h5>
+            </div>
+            <div class="mood-card stressed-mood" data-mood="stressed">
+                <div class="icon-container">
+                    <img src="assets/stress.svg" alt="You're mood is stressed now">
+                </div>
+                <h5>Stress</h5>
+            </div>
+        </div>
+
+        <div class="typewriter-container">
+            <div id="section" class="typewriter-text">
+                <h4></h4>
+                <p class="author"></p>
+            </div>
+        </div>
+
+        <div id="quote-modal" class="modal">
+            <div class="modal-content">
+                <div class="quote-container">
+                    <img src="assets/quote.svg" alt="Your quote" class="quote-svg">
+                    <p id="quote-text"></p>
+                    <p id="quote-author"></p>
+                </div>
+
+                <p class="plus-note">Here's your quote for today. Come back tomorrow for a new one.</p>
+
+                <div class="download-options">
+                    <button class="image-button" data-ratio="9:16">
+                        <i class="ph-duotone ph-image"></i>
+                        Download image</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="error-container"></div>
+
+        <p class="subtext">
+            This project is inspired by a childhood memory of a box full of cards, where I'd pick one each day and find
+            a message that often felt just right. Sometimes, a quote speaks to something we’re going through quietly,
+            even when it’s hard to put into words. Other times, it’s just a gentle reminder for the day. All quotes are
+            sourced from LLMs. If you find any mistakes or incorrect attribution, <a
+                href="https://bsky.app/profile/romio.substack.com" target="_blank" rel="noopener noreferrer">please send
+                a message
+                here.</a>
+        </p>
+
+        <p class="subtext">
+            Here's <a href="https://www.youtube.com/watch?v=YRS0EScCWY0" target="_blank" rel="noopener noreferrer">a
+                link</a> if you are
+            having a rough day.
+        </p>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
